@@ -19,3 +19,9 @@ steps:
     testResultsFiles: '**/*.trx'
 
 - task: PublishBuildArtifacts@1
+
+- task: AzureRmWebAppDeployment@3
+  inputs:
+    azureSubscription: 'pipeline-connection'
+    WebAppName: 'rbe-devops-test-1'
+    Package: $(System.ArtifactsDirectory)/**/*.zip
