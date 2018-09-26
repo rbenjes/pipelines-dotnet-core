@@ -22,6 +22,6 @@ steps:
 
 - task: AzureRmWebAppDeployment@3
   inputs:
-    azureSubscription: 'Visual Studio Enterprise (1c860f83-3914-47d2-ba13-aee7f701f66d)'
+    azureSubscription: 'pipeline-connection'
     WebAppName: 'rbe-devops-test-1'
     Package: $(System.ArtifactsDirectory)/**/*.zip
